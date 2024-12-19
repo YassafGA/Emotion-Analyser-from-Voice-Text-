@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ses Uygulamasi</title>
+    <!-- CSS Bağlantısı -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    
+    <div class="grid-container">
+        <div class="box" id="box1">
+            <h2>kare 1 sol</h2>
+            <p>buraya duyulan metin gelecek</p>
+            {% if transcription %}
+                <div class="result">{{ transcription }}</div>
+            {% endif %}
+            {% if error %}
+                <div class="error">{{ error }}</div>
+            {% endif %}
+        </div>
+        <div class="box" id="box2">
+            <h2>kare 2 sağ</h2>
+            <p>emojiler gelecek</p>
+            <div>{{ analysis }}</div>
+        </div>
+        
+        <div class="box" id="box3">
+            
+                <h1></h1>
+                <form action="/process_audio" method="post">
+                    <button type="submit">Bas ve konuş</button>
+                </form>
+    </div>
+
+</body>
+</html>
