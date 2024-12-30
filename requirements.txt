@@ -1,6 +1,0 @@
-Flask==2.3.3
-SpeechRecognition==3.8.1
-pyaudio==0.2.13
-wave==0.0.2
-textblob==0.17.1
-python-bidi==0.4.2
